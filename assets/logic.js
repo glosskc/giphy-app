@@ -16,7 +16,6 @@ $.ajax({
     var stillImgUrl = response.data[i].images.fixed_height_still.url;
     var animateImgUrl = response.data[i].images.fixed_height.url;
 
-    // var imgURL = response.data.original;
 
     var imgURL = $("<img>").attr("src", stillImgUrl);
     imgURL.attr("data-still",stillImgUrl);
@@ -60,10 +59,10 @@ function renderButtons(){
         // This line grabs the input from the textbox
         var search = $("#gif-input").val().trim();
 
-        // Adding movie from the textbox to our array
+        // Adding gif from the textbox to our array
         topics.push(search);
 
-        // Calling renderButtons which handles the processing of our movie array
+        // Calling renderButtons which handles the processing of our topics array
         renderButtons();
       });
 
